@@ -1,0 +1,20 @@
+{
+  "name": "sarah-puppet-netrc",
+  "author": "sarah",
+  "description": "",
+  "license": "",
+  "project_page": "",
+  "source": "",
+  "summary": "",
+  "version": "",
+  "checksums": {
+    "Modulefile": "fa13ce98c3e9f5f61c39c8ad2039a686",
+    "README": "c758de74c3c942f3f5aa5162190b5603",
+    "manifests/init.pp": "7768439747250f1d0d855d7c56cf80e8",
+    "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
+    "templates/netrc.erb": "2fbf8e72cd28519514b015dadc804dd1",
+    "tests/init.pp": "3fde5b9e2ed9c260fb933d7f1db2c1f1"
+  },
+  "dependencies": []
+}
