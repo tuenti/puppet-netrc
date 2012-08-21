@@ -23,6 +23,6 @@ define netrc::foruser($root_home_directory="/home",$user, $machine_user_password
 		ensure => present,
 		content => template('netrc/netrc.erb'),
 		mode => '0600',
-		owner => '$user'		
+		owner => "$user"		
 	}
 }
