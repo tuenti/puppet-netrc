@@ -25,7 +25,7 @@ define netrc::foruser(
   $filename = ".netrc"
   $prefixes = ['machine ','	login ','	password ']
 	
-  file { "$root_home_directory/$user/$filename":
+  file { "$home_directory/$user/$filename":
     ensure => present,
     content => template('netrc/netrc.erb'),
     mode => '0600',
