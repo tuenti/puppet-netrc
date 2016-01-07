@@ -18,14 +18,13 @@ class netrc {
 }
 
 define netrc::foruser(
-  $home_directory="/home",
+  $home_base_directory="/home",
   $user,
   $machine_user_password_triples) {
 
   $filename = ".netrc"
-  $prefixes = ['machine ','	login ','	password ']
-	
-  file { "$home_directory/$user/$filename":
+
+  file { "$home_base_directory/$user/$filename":
     ensure => present,
     content => template('netrc/netrc.erb'),
     mode => '0600',

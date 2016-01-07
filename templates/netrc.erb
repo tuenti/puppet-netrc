@@ -1,3 +1,3 @@
-<% @machine_user_password_triples.each_with_index do |triple_part,index|
-        i=index%3 -%><%= @prefixes[i] %><%= triple_part %>
+<% @machine_user_password_triples.each do |triple| -%>
+machine <%= triple[0] -%> login <%= triple[1] -%> password <%= triple[2] %>
 <% end -%>
