@@ -18,14 +18,15 @@ class netrc {
 }
 
 define netrc::foruser(
-  $home_base_directory="/home",
+  Enum["present", "absent"] $ensure = "present",
+  $home_base_directory              = "/home",
   $user,
   $machine_user_password_triples) {
 
   $filename = ".netrc"
 
   file { "$home_base_directory/$user/$filename":
-    ensure => present,
+    ensure => $ensure,
     content => template('netrc/netrc.erb'),
     mode => '0600',
     owner => "$user"
