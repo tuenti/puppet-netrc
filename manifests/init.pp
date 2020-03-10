@@ -23,7 +23,7 @@ define netrc::foruser(
   String                        $user,
   String                        $filename             = ".netrc",
   Stdlib::Absolutepath          $file_path            = "$home_base_directory/$user/$filename",
-  Array                         $machine_user_password_triples)
+  Array                         $machine_user_password_triples) {
 
   file { "$real_file_path":
     ensure  => $ensure,
