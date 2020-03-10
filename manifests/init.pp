@@ -25,7 +25,7 @@ define netrc::foruser(
   Stdlib::Absolutepath          $file_path            = "$home_base_directory/$user/$filename",
   Array                         $machine_user_password_triples) {
 
-  file { "file_path":
+  file { "$file_path":
     ensure  => $ensure,
     content => template('netrc/netrc.erb'),
     mode    => '0600',
