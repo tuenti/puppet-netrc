@@ -22,13 +22,8 @@ define netrc::foruser(
   Stdlib::Absolutepath          $home_base_directory  = "/home",
   String                        $user,
   String                        $filename             = ".netrc",
-  Optional[Stdlib::Absolutepath] $file_path           = "$home_base_directory/$user/$filename",
-  $machine_user_password_triples) {
-
-$real_file_path = $file_path ? {
-    undef   => "$home_base_directory/$user/$filename",
-    default => $file_path
-  }
+  Stdlib::Absolutepath          $file_path            = "$home_base_directory/$user/$filename",
+  Array                         $machine_user_password_triples)
 
   file { "$real_file_path":
     ensure  => $ensure,
