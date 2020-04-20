@@ -1,0 +1,3 @@
+<% $machine_user_password_triples.each  |$key, $value| { -%>
+machine <%= $value['machine'] %> login <%= $value['login'] %> password <%= $value['password'] %>
+<%- } -%>
